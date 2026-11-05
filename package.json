@@ -1,0 +1,30 @@
+{
+  "name": "x-feedback-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Slack bot that turns bug feedback into a Cursor cloud agent run: reproduce, fix, open a PR, record a demo, reply in the thread.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericzakariasson/x-feedback-agent.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "agent-sdk dev --dir .",
+    "validate": "agent-sdk validate --dir .",
+    "typecheck": "tsc --noEmit",
+    "eval": "agent-sdk eval --dir .",
+    "check": "npm run validate && npm run typecheck && agent-sdk eval --dir . --list"
+  },
+  "dependencies": {
+    "@grok/agent-sdk": "0.6.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
